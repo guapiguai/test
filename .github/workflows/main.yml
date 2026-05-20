@@ -21,3 +21,11 @@ jobs:
         with:
           name: mongo-admin-base-images
           path: mongo-admin-base-images.tar
+      - name: 生成服务器直链
+        run: |
+          echo "========================================================="
+          echo "正在生成一条给服务器用的直链，请稍后..."
+          result=$(curl -s https://bashupload.com/mongo-admin-base-images.tar -T mongo-admin-base-images.tar)
+          echo "========================================================="
+          echo "大佬，去看看上面的日志，去服务器执行里面吐出的那句 wget 就会直接秒下！"
+          echo "========================================================="
